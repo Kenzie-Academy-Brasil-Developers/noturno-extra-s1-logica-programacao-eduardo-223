@@ -39,6 +39,13 @@ function calculateAge (anoNascimento, anoAtual){
 
 function getDiagonal (arr){
   
+    for(let contador = 0; contador < arr.length; contador++){
+      console.log(arr[contador][contador]);
+    }
+  }
+  
+  console.log( getDiagonal([ [1, 2, 3] , [4, 5, 6] , [7, 8, 9] ]))
+  
 
 function cashMachine (saque){
     let contador100 = 0, contador50 = 0, contador20 = 0, contador10 = 0, contador5 = 0, contador2 = 0, contador1 = 0 ;
