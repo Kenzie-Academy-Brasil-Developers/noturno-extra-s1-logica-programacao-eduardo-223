@@ -1,21 +1,19 @@
-function calculateSalary (salario, vendas){
-    let vendas30 = 0, vendas50 =0, porcento3 = 3,porcento5 = 5;
+function calculateSalary (salario,vendas){
+    let vendas30 = 0, vendas50 =0, aux = 0;
 
-    if(vendas <= 1.200){
-       vendas30 = parseFloat(vendas) * parseFloat(porcento3)/100;
-       vendas30 = parseFloat(vendas) + parseFloat(vendas30);
-       return vendas30;
+    if(vendas <= 1200){
+       vendas30 = vendas * 3/100;
+       return vendas30+salario;
 
-    }else if(vendas > 1.200){
-        vendas50 = parseFloat(vendas) * parseFloat(porcento5)/100;
-        vendas50 = parseFloat(vendas) + parseFloat(vendas50);
-        vendas30 = parseFloat(1.200) * parseFloat(porcento3)/100;
+    }else{
+        aux = vendas - 1200
+        vendas50 = aux * 5/100;
+        vendas30 = 1200 * 3/100;
         vendas50 = vendas50 + vendas30;
-        return parseFloat(vendas50 + salario);   
+        return vendas50+salario;   
     }
 
 }
-
 
 
 function calculateStock (qtnAtual,qtnMaxima,qtnMinima){
